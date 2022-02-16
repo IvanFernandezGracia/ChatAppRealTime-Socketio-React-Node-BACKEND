@@ -1,11 +1,15 @@
 const mongoose = require("mongoose");
 
 const dbConnection = async () => {
-  try {
-    console.log("hola,");
-    console.log("hola,", process.env.DB_CNN_STRING);
+  const username = encodeURIComponent(process.env.MONGO_USER);
+  const password = encodeURIComponent(process.env.MONGO_PASSWORD);
+  const cluster = process.env.MONGO_CLUSTER;
+  const folder = process.env.MONGO_FOLDER;
 
-    await mongoose.connect(process.env.DB_CNN_STRING, {
+  const uri = `mongodb+srv://${username}:${password}@${cluster}/${folder}`;
+
+  try {
+    await mongoose.connect(uri, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useCreateIndex: true,
