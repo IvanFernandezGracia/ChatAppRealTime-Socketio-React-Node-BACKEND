@@ -15,7 +15,6 @@ https://user-images.githubusercontent.com/48660555/154371545-bd7273a9-c9c8-42e3-
 
 
 
-
 <!-- Tech -->
 ## Skills
 <table>
@@ -27,35 +26,46 @@ https://user-images.githubusercontent.com/48660555/154371545-bd7273a9-c9c8-42e3-
     </tr>
         <td>
         <ul>
-          <li>Cors</li>
-          <li>Cors</li>
-          <li>Cors</li>
-          <li>Cors</li>
-          <li>Cors</li>
-          <li>Cors</li>
-          <li>Cors</li>
+          <li>MongoDB</li>
+          <li>Mongoose models</li>
+          <li>Cluster mongo atlas</li>
+          <li>Schemas</li>
+          <li>Mongo Object _id</li>
+          <li>findtoOne</li>
+          <li>findbyID</li>
+          <li>timestamps</li>
+          <li>MomentJS</li>
+          <li>Schema.method("toJSON")</li>
+          <li>Schema.find().sort().limit()</li>
         </ul>
       </td>    
         <td>
         <ul>
-          <li>Cors</li>
-          <li>Cors</li>
-          <li>Cors</li>
-          <li>Cors</li>
-          <li>Cors</li>
-          <li>Cors</li>
-          <li>Cors</li>
+          <li>Cors Mutiple</li>
+          <li>Server config</li>
+          <li>API Rest endpoints</li>
+          <li>Hash to password bcrypt</li>
+          <li>JWT Auth</li>
+          <li>Router Auth</li>
+          <li>Router ModelClass</li>
+          <li>parse Body</li>
+          <li>Handle Errors</li>
+          <li>Middelware</li>
+          <li>.env</li>
+          <li>ClassModels</li>
+          <li>Express Valilator</li>
+          <li>check</li>
+          <li>Verify JWT</li>
+          <li>res.status</li>
         </ul>
       </td>
         <td>
         <ul>
-          <li>Cors</li>
-          <li>Cors</li>
-          <li>Cors</li>
-          <li>Cors</li>
-          <li>Cors</li>
-          <li>Cors</li>
-          <li>Cors</li>
+          <li>Socket io</li>
+          <li>Validation socket</li>
+          <li>Rooms Socket</li>
+          <li>emit, on</li>
+          <li>Join</li>
         </ul>
       </td>
   </tbody>
