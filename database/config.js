@@ -1,9 +1,10 @@
 const mongoose = require("mongoose");
 
 const dbConnection = async () => {
-  console.log("hola,");
-  console.log("hola,", process.env.DB_CNN_STRING);
   try {
+    console.log("hola,");
+    console.log("hola,", process.env.DB_CNN_STRING);
+
     await mongoose.connect(process.env.DB_CNN_STRING, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
@@ -13,7 +14,7 @@ const dbConnection = async () => {
     console.log("DB online");
   } catch (error) {
     console.log(error);
-    throw new Error("Error en la base de datos - vea logs");
+    throw new Error("Error en la base de datos - vea logs : " + error);
   }
 };
 
