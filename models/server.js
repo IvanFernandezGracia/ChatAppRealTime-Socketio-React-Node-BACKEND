@@ -19,6 +19,22 @@ class Server {
     // Http server
     this.server = http.createServer(this.app);
 
+    // CORS Constructor
+    this.pathCors = [
+      process.env.DOMAIN_FRONT_REACT_PROD,
+      process.env.DOMAIN_FRONT_REACT_DEV,
+    ];
+    console.log(this.pathCors);
+    this.corsOptions = {
+      origin: function (origin, callback) {
+        if (this.pathCors.indexOf(origin) !== -1) {
+          callback(null, true);
+        } else {
+          callback(new Error("Not allowed by CORS"));
+        }
+      },
+    };
+
     // Configuraciones de sockets
     this.io = socketio(this.server, {
       /* configuraciones */
@@ -30,7 +46,7 @@ class Server {
     this.app.use(express.static(path.resolve(__dirname, "../public")));
 
     // CORS
-    this.app.use(cors());
+    this.app.use(cors(this.corsOptions));
 
     // Parseo del body
     this.app.use(express.json());
