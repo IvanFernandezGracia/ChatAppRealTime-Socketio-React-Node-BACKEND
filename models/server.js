@@ -19,15 +19,19 @@ class Server {
     // Http server
     this.server = http.createServer(this.app);
 
-    // CORS Constructor
-    this.pathCors = [
+    console.log([
       process.env.DOMAIN_FRONT_REACT_PROD,
       process.env.DOMAIN_FRONT_REACT_DEV,
-    ];
-    console.log(this.pathCors);
+    ]);
+    // CORS Constructor
     this.corsOptions = {
       origin: function (origin, callback) {
-        if (this.pathCors.indexOf(origin) !== -1) {
+        if (
+          [
+            process.env.DOMAIN_FRONT_REACT_PROD,
+            process.env.DOMAIN_FRONT_REACT_DEV,
+          ].indexOf(origin) !== -1
+        ) {
           callback(null, true);
         } else {
           callback(new Error("Not allowed by CORS"));
